@@ -1,0 +1,381 @@
+/* Universal */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(./images/hd-wallpaper-g60847c923_1920.jpg);
+    height: 100vh;
+    padding: 0;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p,
+a,
+span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: #32a351;
+}
+
+a:hover {
+    color: #217036;
+}
+
+/* Align Items Center */
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+/* Animation */
+.hidden {
+    opacity: 0;
+    transition: all 1.5s;
+    filter: blur(1px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.card {
+    display: flex;
+}
+
+.card:nth-child(2) {
+    transition-delay: 150ms;
+}
+
+.card:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.card:nth-child(4) {
+    transition-delay: 450ms;
+}
+
+.card:nth-child(5) {
+    transition-delay: 600ms;
+}
+
+.card:nth-child(6) {
+    transition-delay: 750ms;
+}
+
+/* Navigation */
+.navbar {
+    transition: top 0.3s;
+    background-color: #f2f2f2;
+    border-bottom: solid .15em black;
+}
+.nav-link {
+    font-size: 1.1em;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: rgb(108, 117, 125);
+}
+
+/* Mobile Nav (Hidden by Default) */
+#mobileNav {
+    display: none;
+}
+
+/* About Page */
+
+#titleContainer {
+    padding: 5em;
+    width: 60%;
+}
+
+#aboutJumbotron {
+    padding: 7rem;
+    width: 60%;
+    padding-bottom: 2em;
+    padding-top: 5em;
+    border: .15em solid;
+    background-color: rgba(233, 232, 230, 0.7);
+}
+
+/* Projects Page */
+h2.display-5 {
+    padding: .25em;
+}
+#projectTitleContainer {
+    padding: 5em;
+    width: 80%;
+}
+
+#projectJumbotron {
+    padding: 3em;
+    width: 80%;
+    border: .15em solid;
+    background-color: rgba(233, 232, 230, 0.7);
+}
+
+#projectTimelineContainer {
+    width: 80%;
+    padding: 2em 0 2em 2em;
+}
+
+/* Project Date Titles */
+.display-6 {
+    padding: 1em;
+}
+
+/* Project Cards */
+.card-title {
+    padding: 1.25em 0 1em;
+}
+
+/* Center Single Project Card */
+.projectCenter {
+    display: contents;
+}
+
+/* Skills Page */
+#skillsJumbotron {
+    padding: 7rem;
+    width: 60%;
+    padding-bottom: 2em;
+    padding-top: 5em;
+    display: inline-block;
+    width: fit-content;
+    border: .15em solid;
+    background-color: rgba(233, 232, 230, 0.7);
+}
+
+/* Contact Page */
+#contactJumbotron {
+    padding: 7rem;
+    width: 60%;
+    padding-bottom: 2em;
+    padding-top: 5em;
+    border: .15em solid;
+    background-color: rgba(233, 232, 230, 0.7);
+}
+
+.contactButton:hover {
+    color: #32a351;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: .7em;
+    width: fit-content;
+    height: 10px;
+    font-size: .7em;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-image: url(./images/fantasy-g4f07c974a_1920.jpg);
+    color: rgb(233, 232, 230);
+    background-color: rgb(13, 13, 23);
+    -webkit-transition: all 0.7s ease-in;
+    -webkit-transition: all 1.2s ease-out;
+}
+
+.dark-mode .card,
+.dark-mode #titleContainer,
+.dark-mode #aboutJumbotron,
+.dark-mode #projectJumbotron,
+.dark-mode #skillsJumbotron,
+.dark-mode #contactJumbotron {
+    color: rgb(233, 232, 230);
+    background-color: rgba(13, 13, 23);
+    border: .25em solid rgba(233, 232, 230, 0.7);
+}
+
+.dark-mode .navbar {
+    background-color: transparent;
+    border-bottom: solid .1em #f2f2f2;
+}
+
+.dark-mode .nav-link,
+.dark-mode button.navbar-toggler,
+.dark-mode span .navbar-toggler-icon {
+    color: rgb(233, 232, 230);
+}
+
+.dark-mode .nav-link.active {
+    color: rgba(233, 232, 230, 0.7)
+}
+
+/* Dark Mode Switch */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(13, 13, 23);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 .5px rgb(13, 13, 23);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 17px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1155px) {
+    body {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 994px) {
+    /* Universal */
+    body {
+        background-size: cover;
+    }
+    #titleContainer,
+    #aboutJumbotron,
+    #projectJumbotron,
+    #projectTimelineContainer,
+    #skillsJumbotron,
+    #contactJumbotron {
+        padding: 0;
+        width: 80%;
+    }
+    /* Nav */
+    nav.navbar-expand-lg {
+        display: none;
+    }
+    /* Mobile Nav */
+    #mobileNav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #offcanvasNavbar {
+        width: 60%;
+    }
+    /* Dark Mode Switch */
+    .switch {
+        width: 60px;
+        height: 34px;
+    }
+    .slider:before {
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+    }
+    input:focus+.slider {
+        box-shadow: 0 0 1px rgb(13, 13, 23);
+    }
+    .slider.round {
+        border-radius: 34px;
+    }
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* About */
+    /* Project */
+    h2.display-5 {
+        padding: .5em;
+    }
+    #projectSpotTitle {
+        padding: .5em;
+    }
+    a.btn-dark {
+        margin: 1em;
+    }
+    .col {
+        width: auto;
+        padding: 2em;
+    }
+    /* Skills */
+    #skillsJumbotron {
+        min-width: fit-content;
+        padding: 2em 5em;
+    }
+    /* Contact */
+    #contactJumbotron {
+        padding: 0 1em;
+    }
+}
